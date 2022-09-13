@@ -11,9 +11,7 @@ pool:
 #  vmImage: ubuntu-latest
 
 steps:
-- task: dependency-check-build-task@6
+- task: WhiteSource@21
   inputs:
-    projectName: 'DevSecOps'
-    scanPath: './'
-    format: 'HTML'
+    cwd: '$(System.DefaultWorkingDirectory)'
 
