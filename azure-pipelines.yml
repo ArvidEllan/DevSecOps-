@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: local
+  name: W22_Hosted_Pool
 #  vmImage: ubuntu-latest
 
 steps:
