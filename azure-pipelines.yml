@@ -11,9 +11,10 @@ pool:
 #  vmImage: ubuntu-latest
 
 steps:
-- task: dependency-check-build-task@6
+- task: OWASPDependencyCheck@0
   inputs:
-    projectName: 'DevSecOps'
-    scanPath: './'
-    format: 'CSV'
+    outputDirectory: '$(Agent.TempDirectory)/dependency-scan-results'
+    scanDirectory: '$(Build.SourcesDirectory)'
+    outputFormat: 'XML'
+    useSonarQubeIntegration: true
 
